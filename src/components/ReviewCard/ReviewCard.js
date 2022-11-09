@@ -2,7 +2,7 @@ import React from 'react';
 import './ReviewCard.css'
 
 const ReviewCard = ({review}) => {
-    const {name,photo,comment} = review;
+    const {name,photo,comment,serviceName} = review;
     console.log(review);
     return (
         <div className="container custom_border flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 dark:bg-gray-900 dark:text-gray-100">
@@ -13,7 +13,7 @@ const ReviewCard = ({review}) => {
                     </div>
                     <div>
                         <h4 className="font-bold">{name}</h4>
-                        <span className="text-xs dark:text-gray-400">2 days ago</span>
+                        <span className="text-xs dark:text-gray-400">{serviceName}</span>
                     </div>
                 </div>
                 <div className="flex items-center space-x-2 dark:text-yellow-500">
