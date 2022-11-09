@@ -4,41 +4,47 @@
         "price": 700,
         "simage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/thumbs/1617776411_microwaveovenrepairservices.jpg",
         "fimage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/banners/1617776377_microwaveovenrepairservices.jpg",
-        "details": "Microwave oven plays a very important role in daily life to heat and cook food. When it gets damaged or start dysfunctions, you would require an expert technician to troubleshoot the problem. At Sheba.xyz we offer you a platform to hire experts and professionals to microwave oven repair service. Find the best microwave oven repair service near you through Sheba.xyz and get that faulty microwave oven fixed right away!"
+        "details": "Microwave oven plays a very important role in daily life to heat and cook food. When it gets damaged or start dysfunctions, you would require an expert technician to troubleshoot the problem. At Sheba.xyz we offer you a platform to hire experts and professionals to microwave oven repair service. Find the best microwave oven repair service near you through Sheba.xyz and get that faulty microwave oven fixed right away!",
+        "service_id":1
     },
     {
         "title": "LCD/LED/SMART TV Repair Services",
         "price": 900,
         "simage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/thumbs/1622543805_tvrepairservices.jpg",
         "fimage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/banners/1622544086_tvrepairservices.jpg",
-        "details": "Sheba.xyz marketplace offers LCD/LED TV installation service which can help you to connect with the best TV service centers and on ground technicians to relieve you from hassle. With Sheba.xyz, you can avail quick and quality service at your doorstep easily."
+        "details": "Sheba.xyz marketplace offers LCD/LED TV installation service which can help you to connect with the best TV service centers and on ground technicians to relieve you from hassle. With Sheba.xyz, you can avail quick and quality service at your doorstep easily.",
+        "service_id":2
     },
     {
         "title": "Refrigerator Repair Services",
         "price": 3000,
         "simage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/thumbs/1617875097_refrigeratorrepairservices.jpg",
         "fimage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/banners/1617875033_refrigeratorrepairservices.jpg",
-        "details": "Tired of calling and finding a fridge or refrigerator repair service center near you? Sheba.xyz is the largest marketplace in Bangladesh where we serve you with every possible household service. Refrigerator repairing service is one of our services to repair all types of fridge or freezer related problems. At Sheba.xyz online marketplace, you can hire professional technicians to repair your fridge or freezer. From general diagnosis to material repairing you can find it all in one place. Our verified Service Providers will deliver skilled and professional refrigerator technicians at your service. We deliver a fridge expert technician with integrity from our professional service providers."
+        "details": "Tired of calling and finding a fridge or refrigerator repair service center near you? Sheba.xyz is the largest marketplace in Bangladesh where we serve you with every possible household service. Refrigerator repairing service is one of our services to repair all types of fridge or freezer related problems. At Sheba.xyz online marketplace, you can hire professional technicians to repair your fridge or freezer. From general diagnosis to material repairing you can find it all in one place. Our verified Service Providers will deliver skilled and professional refrigerator technicians at your service. We deliver a fridge expert technician with integrity from our professional service providers.",
+        "service_id":3
     },
     {
         "title": "Washing Machine Repair Services",
         "price": 2500,
         "simage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/thumbs/1619428822_washingmachinerepairservices.jpg",
         "fimage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/banners/1619428814_washingmachinerepairservices.jpg",
-        "details": "Find the best washing machine repair service only on Sheba.xyz marketplace. Washing machines take care of your clothes, you should take care of it too,right? So, why wait and look for a technician here and there. You can find many expert washing machine technicians at one place. Sheba.xyz offers you a platform to hire experts to repair your faulty washing machine fixed right away!"
+        "details": "Find the best washing machine repair service only on Sheba.xyz marketplace. Washing machines take care of your clothes, you should take care of it too,right? So, why wait and look for a technician here and there. You can find many expert washing machine technicians at one place. Sheba.xyz offers you a platform to hire experts to repair your faulty washing machine fixed right away!",
+        "service_id":4
     },
     {
         "title": "Kitchen Hood Repair Services",
         "price": 2000,
         "simage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/thumbs/1619428497_kitchenhoodrepairservices.jpg",
         "fimage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/banners/1619428488_kitchenhoodrepairservices.jpg",
-        "details": "Sheba.xyz marketplace comes up with kitchen hood maintenance service for you. To keep your kitchen hood in pristine condition Sheba.xyz offers kitchen chimney repair.  Upon receiving your order online our verified service providers will send cleaners to your doorstep in your specified time."
+        "details": "Sheba.xyz marketplace comes up with kitchen hood maintenance service for you. To keep your kitchen hood in pristine condition Sheba.xyz offers kitchen chimney repair.  Upon receiving your order online our verified service providers will send cleaners to your doorstep in your specified time.",
+        "service_id":5
     },
     {
         "title": "IPS Repair Services",
         "price": 1500,
         "simage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/thumbs/1619428429_ipsrepairservices.jpg",
         "fimage": "https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/banners/1619428417_ipsrepairservices.jpg",
-        "details": "At Sheba.xyz marketplace we provide you with a platform wherein you can hire the best IPS Servicing experts near you. From IPS installation to repairing you can get it all in Sheba.xyz. We have verified and trusted professionals who strive hard to deliver you the best IPS service at your doorstep."
+        "details": "At Sheba.xyz marketplace we provide you with a platform wherein you can hire the best IPS Servicing experts near you. From IPS installation to repairing you can get it all in Sheba.xyz. We have verified and trusted professionals who strive hard to deliver you the best IPS service at your doorstep.",
+        "service_id":6
     }
 ]
