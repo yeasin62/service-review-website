@@ -1,12 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { authContext } from '../../../AuthProvider/AuthProvider';
+import ReviewCard from '../../ReviewCard/ReviewCard';
 
 const ServiceDetails = () => {
     const serviceDetails = useLoaderData();
     console.log(serviceDetails);
     const {title,price,fimage,details,_id} = serviceDetails;
     const {user} = useContext(authContext);
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/reviews`)
+        .then(res => res.json())
+        .then(data => setReviews(data));
+    },[])
 
     const submitReview = (event) => {
         event.preventDefault();
@@ -83,6 +91,14 @@ const ServiceDetails = () => {
                 </>
             }
 
+            <section className="review_section">
+                <h1 className='text-center text-4xl py-10'>Reviews</h1>
+                <div className='grid grid-cols-3 gap-4 mb-10 '>
+                    {
+                        reviews.map(review => <ReviewCard key={review._id} review={review}></ReviewCard>)
+                    }
+                </div>
+            </section>
             
             <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
                 <form onSubmit={submitReview} className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
