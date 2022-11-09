@@ -4,17 +4,44 @@ import { authContext } from '../../../AuthProvider/AuthProvider';
 
 const ServiceDetails = () => {
     const serviceDetails = useLoaderData();
-    const {title,price,fimage,details,service_id} = serviceDetails;
+    console.log(serviceDetails);
+    const {title,price,fimage,details,_id} = serviceDetails;
     const {user} = useContext(authContext);
 
     const submitReview = (event) => {
         event.preventDefault();
-        const email = event.target.email.value;
-        const serviceName = event.target.serviceName.value;
-        const serviceId = event.target.serviceId.value;
-        const review = event.target.review.value;
+        const email = user?.email;
+        const id = _id;
+        const comment = event.target.review.value;
+        const photo = user?.photoURL;
+        const userName = user?.displayName;
 
-        console.log(email,serviceName,serviceId,review);
+        const review = {
+            name: userName,
+            email: email,
+            serviceId: id,
+            serviceName: title,
+            comment: comment,
+            photo: photo
+        }
+        
+        fetch(`http://localhost:5000/reviews`,{
+            method:'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(review)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.acknowledged){
+                
+                alert('Review added successfully');
+                event.target.review.value = "";
+            }
+        })
+        .catch(error => console.error(error));
+        
     }
 
     return (
@@ -62,22 +89,14 @@ const ServiceDetails = () => {
                     <fieldset className="grid grid-cols-1 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
                     <h3 className='text-center text-4xl py-10'>Share your experience</h3>
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
-                            <div className="col-span-full sm:col-span-3">
-                                <label htmlFor="email" className="text-sm">Email</label>
-                                <input id="email" type="email" name="email" value={user?.email} className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900" disabled/>
-                            </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label htmlFor="serviceName" className="text-sm">Service</label>
-                                <input id="serviceName" type="text" name='serviceName' placeholder={title} className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900" disabled/>
-                                <input type="hidden" name="serviceId" id="serviceId" value={service_id}/>
-                            </div>
+                            
                             <div className="col-span-full">
                                 <label htmlFor="bio" className="text-sm">Write your experience</label>
                                 <textarea id="review" placeholder="" name='review' className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"></textarea>
                             </div>
                             <div className="col-span-full">
                                 <div className="flex items-center space-x-2">
-                                    <button type="submit" className="px-4 py-2 border rounded-md dark:border-gray-100">Submit Review</button>
+                                    <button type="submit" className="px-4 py-2 border rounded-md dark:border-gray-100 bg-slate-700 text-white">Submit Review</button>
                                 </div>
                             </div>
                         </div>
