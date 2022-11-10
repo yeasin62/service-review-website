@@ -7,6 +7,7 @@ import ReviewCard from '../../ReviewCard/ReviewCard';
 const Reviews = () => {
     const {user} = useContext(authContext);
     const [reviews, setReviews] = useState([]);
+    console.log(reviews);
     useTitle('My Reviews');
 
     useEffect(()=>{
@@ -38,21 +39,9 @@ const Reviews = () => {
 
         }
     }
-    const handleReviewUpdate = (id, message) => {
-        fetch(`http://localhost:5000/review/${id}`,{
-            method: 'PATCH',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({message:message})
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-        })
-    }
+    
     return (
-        <div className='md:w-4/5 mx-auto h-screen'>
+        <div className='md:w-4/5 mx-auto h-screen reviews'> 
             <h1 className='text-center text-4xl py-10'>My Reviews</h1>
             
                 {
