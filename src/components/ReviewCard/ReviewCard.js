@@ -29,7 +29,7 @@ const ReviewCard = ({review, handleDelete,handleReviewUpdate}) => {
             <div className="p-4 space-y-2 text-sm dark:text-gray-400">
                 <p className='mb-5'>{comment}</p>
                 <button onClick={()=>handleDelete(_id)}><FaTrashAlt></FaTrashAlt></button>
-                <Link to={'/edit-review'} className="inline-block ml-2"><FaEdit></FaEdit></Link>
+                <Link to={'/edit-review'} className="inline-block ml-2 editBtn"><FaEdit></FaEdit></Link>
             </div>
             
 

@@ -4,6 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { authContext } from '../../../AuthProvider/AuthProvider';
 import useTitle from '../../../hooks/useTitles';
 import ReviewCard from '../../ReviewCard/ReviewCard';
+import './ServiceDetails.css';
 
 const ServiceDetails = () => {
     const serviceDetails = useLoaderData();
@@ -81,7 +82,7 @@ const ServiceDetails = () => {
                 </div>
             </div>
 
-            <section className="review_section">
+            <section className="review_section service_review">
                 <h1 className='text-center text-4xl py-10'>Reviews</h1>
                 <div className='grid grid-cols-3 gap-4 mb-10 '>
                     {
