@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { Link, useLoaderData } from 'react-router-dom';
 import { authContext } from '../../../AuthProvider/AuthProvider';
 import ReviewCard from '../../ReviewCard/ReviewCard';
 
 const ServiceDetails = () => {
     const serviceDetails = useLoaderData();
-    console.log(serviceDetails);
     const {title,price,fimage,details,_id} = serviceDetails;
     const {user} = useContext(authContext);
     const [reviews, setReviews] = useState([]);
@@ -14,7 +14,7 @@ const ServiceDetails = () => {
         fetch(`http://localhost:5000/myreviews?serviceId=${_id}`)
         .then(res => res.json())
         .then(data => setReviews(data));
-    },[])
+    },[_id])
 
     const submitReview = (event) => {
         event.preventDefault();
@@ -44,7 +44,7 @@ const ServiceDetails = () => {
         .then(data => {
             if(data.acknowledged){
                 
-                alert('Review added successfully');
+                toast('Review added successfully');
                 event.target.review.value = "";
             }
         })
@@ -79,17 +79,6 @@ const ServiceDetails = () => {
                     </div>
                 </div>
             </div>
-            {
-                user?.uid ?
-                <>
-                
-                </> :
-                <>
-                    <p className='text-center mt-10'>Please login to submit your review</p>
-                    
-                    <Link to={'/login'} className='text-center block px-8 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800'><button type="button">Login</button></Link>
-                </>
-            }
 
             <section className="review_section">
                 <h1 className='text-center text-4xl py-10'>Reviews</h1>
@@ -99,26 +88,41 @@ const ServiceDetails = () => {
                     }
                 </div>
             </section>
-            
-            <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
-                <form onSubmit={submitReview} className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
-                    <fieldset className="grid grid-cols-1 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
-                    <h3 className='text-center text-4xl py-10'>Share your experience</h3>
-                        <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
-                            
-                            <div className="col-span-full">
-                                <label htmlFor="bio" className="text-sm">Write your experience</label>
-                                <textarea id="review" placeholder="" name='review' className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"></textarea>
-                            </div>
-                            <div className="col-span-full">
-                                <div className="flex items-center space-x-2">
-                                    <button type="submit" className="px-4 py-2 border rounded-md dark:border-gray-100 bg-slate-700 text-white">Submit Review</button>
+
+
+            {
+                user?.uid ?
+                <>
+                <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
+                    <form onSubmit={submitReview} className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
+                        <fieldset className="grid grid-cols-1 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
+                        <h3 className='text-center text-4xl py-10'>Share your experience</h3>
+                            <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
+                                
+                                <div className="col-span-full">
+                                    <label htmlFor="bio" className="text-sm">Write your experience</label>
+                                    <textarea id="review" placeholder="" name='review' className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"></textarea>
+                                </div>
+                                <div className="col-span-full">
+                                    <div className="flex items-center space-x-2">
+                                        <button type="submit" className="px-4 py-2 border rounded-md dark:border-gray-100 bg-slate-700 text-white">Submit Review</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </section>
+                        </fieldset>
+                    </form>
+                </section>
+                </> :
+                <>
+                    <p className='text-center mt-20'>Please login to submit your review</p>
+                    
+                    <Link to={'/login'} className='text-center block px-8 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800 mb-20'><button type="button" className='bg-slate-700 text-white px-10 py-3'>Login</button></Link>
+                </>
+            }
+
+            
+            
+            
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { authContext } from '../../../AuthProvider/AuthProvider';
 
 const Signup = () => {
@@ -64,8 +65,10 @@ const Signup = () => {
                         </div>
                         <button type="submit" className="px-4 py-2 border rounded-md dark:border-gray-100">Signup</button>
                         <p className='text-red-500'>{error}</p>
+                        
                     </div>
                 </fieldset>
+                <p>Already have an account? <Link to={'/login'}>Login Now</Link></p>
             </form>
         </section>
     );

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AiOutlineGoogle } from "react-icons/ai";
 import { authContext } from '../../../AuthProvider/AuthProvider';
 import {GoogleAuthProvider} from 'firebase/auth';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
         const [error, setError] = useState('');
@@ -69,6 +69,7 @@ const Login = () => {
                 </fieldset>
                         <p className='text-center m-0'>or</p>
                         <button onClick={handleGoogleSignIn} type="button" className="px-4 py-2 mt-0 border rounded-md dark:border-gray-100"><AiOutlineGoogle className='inline'></AiOutlineGoogle> Login with Google</button>
+                        <p>Don't have an account? <Link to={'/signup'}>Signup Now</Link></p>
             </form>
         </section>
     );

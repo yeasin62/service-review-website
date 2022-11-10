@@ -1,9 +1,11 @@
 import React from 'react';
 import './ReviewCard.css'
+import { FaEdit, FaTrashAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-const ReviewCard = ({review}) => {
-    const {name,photo,comment,serviceName} = review;
-    console.log(review);
+const ReviewCard = ({review, handleDelete,handleReviewUpdate}) => {
+    const {_id,name,photo,comment,serviceName} = review;
+    
     return (
         <div className="container custom_border flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 dark:bg-gray-900 dark:text-gray-100">
             <div className="flex justify-between p-4">
@@ -24,8 +26,12 @@ const ReviewCard = ({review}) => {
                 </div>
             </div>
             <div className="p-4 space-y-2 text-sm dark:text-gray-400">
-                <p>{comment}</p>
+                <p className='mb-5'>{comment}</p>
+                <button onClick={()=>handleDelete(_id)}><FaTrashAlt></FaTrashAlt></button>
+                <Link to={'/edit-review'} className="inline-block ml-2"><FaEdit></FaEdit></Link>
             </div>
+            
+
         </div>
     );
 };

@@ -2,71 +2,97 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <section className="dark:bg-gray-800 dark:text-gray-100">
-	<div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-		<a rel="noopener noreferrer" href="#" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900">
-			<img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
-			<div className="p-6 space-y-2 lg:col-span-5">
-				<h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">Noster tincidunt reprimique ad pro</h3>
-				<span className="text-xs dark:text-gray-400">February 19, 2021</span>
-				<p>Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert putent doctus id.</p>
-			</div>
-		</a>
-		<div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-			<a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
-				<img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?1" />
-				<div className="p-6 space-y-2">
-					<h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-					<span className="text-xs dark:text-gray-400">January 21, 2021</span>
-					<p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-				</div>
-			</a>
-			<a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
-				<img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?2" />
-				<div className="p-6 space-y-2">
-					<h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-					<span className="text-xs dark:text-gray-400">January 22, 2021</span>
-					<p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-				</div>
-			</a>
-			<a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
-				<img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?3" />
-				<div className="p-6 space-y-2">
-					<h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-					<span className="text-xs dark:text-gray-400">January 23, 2021</span>
-					<p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-				</div>
-			</a>
-			<a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block">
-				<img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?4" />
-				<div className="p-6 space-y-2">
-					<h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-					<span className="text-xs dark:text-gray-400">January 24, 2021</span>
-					<p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-				</div>
-			</a>
-			<a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block">
-				<img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?5" />
-				<div className="p-6 space-y-2">
-					<h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-					<span className="text-xs dark:text-gray-400">January 25, 2021</span>
-					<p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-				</div>
-			</a>
-			<a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block">
-				<img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?6" />
-				<div className="p-6 space-y-2">
-					<h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-					<span className="text-xs dark:text-gray-400">January 26, 2021</span>
-					<p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-				</div>
-			</a>
-		</div>
-		<div className="flex justify-center">
-			<button type="button" className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-900 dark:text-gray-400">Load more posts...</button>
-		</div>
-	</div>
-</section>
+        <main className="py-6 lg:w-4/5 mx-auto">
+  <div className="mb-12">
+    <div className="mb-12">
+      <div className="flex flex-col md:flex-row w-full lg:w-10/12">
+        <div className="md:mr-4 mb-2 md:mb-0 md:w-4/12 ">
+          <a className="bg-gray-100" href="/blog/2018/12/styling-css/">
+            <img width="640" height="360" className="rounded mb-3 hover:opacity-70 transition duration-300 ease-in-out" alt="Styling CSS" src="https://source.unsplash.com/INHtWKpBTsA/640x360" />
+          </a>
+        </div>
+        <div className="flex-1">
+          <div className="flex items-center">
+            <div className="text-sm font-medium text-gray-700">Dec 29, 2018</div>
+          </div>
+          <a href="/blog/2018/12/styling-css/" className="hover:text-green-400">
+            <h2 className="text-2xl font-semibold mb-1">Styling CSS</h2>
+          </a>
+          <p className="text-base font-light text-gray-600 mb-4">Learn how to use Markdown to write blog posts. Understand front-matter and how it is used in templates.</p>
+          <div className="mb-2">
+            <a className="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="/categories/development">Development</a>
+            <a className="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="/categories/javascript">Javascript</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="mb-12">
+      <div className="flex flex-col md:flex-row w-full lg:w-10/12">
+        <div className="md:mr-4 mb-2 md:mb-0 md:w-4/12 ">
+          <a className="bg-gray-100" href="/blog/2018/12/hosting-your-static-site/">
+            <img width="640" height="360" className="rounded mb-3 hover:opacity-70 transition duration-300 ease-in-out" alt="Hosting Your Static Site" src="https://source.unsplash.com/y3PdLg_zSDs/640x360" />
+          </a>
+        </div>
+        <div className="flex-1">
+          <div className="flex items-center">
+            <div className="text-sm font-medium text-gray-700">Dec 29, 2018</div>
+          </div>
+          <a href="/blog/2018/12/hosting-your-static-site/" className="hover:text-green-400">
+            <h2 className="text-2xl font-semibold mb-1">Hosting Your Static Site</h2>
+          </a>
+          <p className="text-base font-light text-gray-600 mb-4">Hosting your website as a static site will improve performance and improve security.</p>
+          <div className="mb-2">
+            <a className="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="/categories/hosting">Hosting</a>
+            <a className="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="/categories/development">Development</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="mb-12">
+      <div className="flex flex-col md:flex-row w-full lg:w-10/12">
+        <div className="md:mr-4 mb-2 md:mb-0 md:w-4/12 ">
+          <a className="bg-gray-100" href="/blog/2018/12/designing-your-brand/">
+            <img width="640" height="360" className="rounded mb-3 hover:opacity-70 transition duration-300 ease-in-out" alt="Designing Your Brand" src="https://source.unsplash.com/YmQ0-nmWcV0/640x360" />
+          </a>
+        </div>
+        <div className="flex-1">
+          <div className="flex items-center">
+            <div className="text-sm font-medium text-gray-700">Dec 20, 2018</div>
+          </div>
+          <a href="/blog/2018/12/designing-your-brand/" className="hover:text-green-400">
+            <h2 className="text-2xl font-semibold mb-1">Designing Your Brand</h2>
+          </a>
+          <p className="text-base font-light text-gray-600 mb-4">Branding is an intrinsic part of your companies success, learn why your brand matters.</p>
+          <div className="mb-2">
+            <a className="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="/categories/branding">Branding</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="mb-12">
+      <div className="flex flex-col md:flex-row w-full lg:w-10/12">
+        <div className="md:mr-4 mb-2 md:mb-0 md:w-4/12 ">
+          <a className="bg-gray-100" href="/blog/2018/12/optimizing-your-website/">
+            <img width="640" height="360" className="rounded mb-3 hover:opacity-70 transition duration-300 ease-in-out" alt="Optimizing Your Website" src="https://source.unsplash.com/MS7KD9Ti7FQ/640x360" />
+          </a>
+        </div>
+        <div className="flex-1">
+          <div className="flex items-center">
+            <div className="text-sm font-medium text-gray-700">Dec 20, 2018</div>
+          </div>
+          <a href="/blog/2018/12/optimizing-your-website/" className="hover:text-green-400">
+            <h2 className="text-2xl font-semibold mb-1">Optimizing Your Website</h2>
+          </a>
+          <p className="text-base font-light text-gray-600 mb-4">Making sure your website runs fast and loads quickly is a fundamental part of the web design and seo process.</p>
+          <div className="mb-2">
+            <a className="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="/categories/development">Development</a>
+            <a className="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="/categories/web-design">Web Design</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
     );
 };
 

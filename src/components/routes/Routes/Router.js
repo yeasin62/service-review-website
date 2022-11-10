@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../../../layouts/Main/Main';
 import Blog from '../../pages/Blog/Blog';
+import Edit from '../../pages/Edit/Edit';
 import Error from '../../pages/Error/Error';
 import FAQ from '../../pages/FAQ/FAQ';
 import Home from '../../pages/Home/Home';
@@ -10,6 +11,7 @@ import Reviews from '../../pages/Reviews/Reviews';
 import ServiceDetails from '../../pages/ServiceDetails/ServiceDetails';
 import Services from '../../pages/Services/Services';
 import Signup from '../../pages/Signup/Signup';
+import PrivateRoute from '../../PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/reviews',
-                element: <Reviews></Reviews>
+                element: <PrivateRoute><Reviews></Reviews></PrivateRoute>
             },
             {
                 path: '/login',
@@ -43,6 +45,10 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/edit-review',
+                element: <Edit></Edit>
             },
             {
                 path: '/service/:id',

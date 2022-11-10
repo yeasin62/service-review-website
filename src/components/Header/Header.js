@@ -25,7 +25,7 @@ const Header = () => {
                         <Link to={'/services'} className="flex items-center px-4 -mb-1 dark:border-transparent text-white">Services</Link>
                     </li>
                     <li className="flex">
-                        <Link to={'/reviews'} className="flex items-center px-4 -mb-1 dark:border-transparent text-white">Reviews</Link>
+                        <Link to={'/reviews'} className="flex items-center px-4 -mb-1 dark:border-transparent text-white">My Reviews</Link>
                     </li>
                     <li className="flex">
                         <Link to={'/faq'} className="flex items-center px-4 -mb-1 dark:border-transparent text-white">FAQ</Link>
