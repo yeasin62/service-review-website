@@ -3,12 +3,14 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import { authContext } from '../../../AuthProvider/AuthProvider';
 import {GoogleAuthProvider} from 'firebase/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useTitle from '../../../hooks/useTitles';
 
 const Login = () => {
         const [error, setError] = useState('');
         const {providerLogin,userSignIn} = useContext(authContext);
         const googleProvider = new GoogleAuthProvider();
-
+        useTitle('Login');
+        
         const navigate = useNavigate();
         const location = useLocation();
         const from = location.state?.from?.pathname || '/';

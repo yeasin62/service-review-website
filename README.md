@@ -7,14 +7,14 @@
 6. Private Route
 7. Public Route
 8. Conditional review system
+9. Live link: 
 
 
-11. On the "Add service" page(also a private route), you can **add a service** and that service will be shown on the home page. When the service is added successfully, a toast/modal with a message will pop up to inform the user.
 
 
 ### Bonus Requirements
-1. Your Readme file for the client-side repo should have details about your project's features and functionalities in bullet points(at least five bullet points) and your live link. Adding a meaningful readme file for the server-side repo is optional.
-2. At least 15 meaningful GitHub commits for the client-side and 8 meaningful commits for the server-side repository.
+
+
 3. Your code should be clean and organized. Comments should be added where necessary
 1. The **title of the page** will change with the page you visit. It should not be the same for every route
 2. Add a meaningful favicon

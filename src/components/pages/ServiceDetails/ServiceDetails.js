@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useLoaderData } from 'react-router-dom';
 import { authContext } from '../../../AuthProvider/AuthProvider';
+import useTitle from '../../../hooks/useTitles';
 import ReviewCard from '../../ReviewCard/ReviewCard';
 
 const ServiceDetails = () => {
@@ -9,6 +10,7 @@ const ServiceDetails = () => {
     const {title,price,fimage,details,_id} = serviceDetails;
     const {user} = useContext(authContext);
     const [reviews, setReviews] = useState([]);
+    useTitle(title);
 
     useEffect(()=>{
         fetch(`http://localhost:5000/myreviews?serviceId=${_id}`)

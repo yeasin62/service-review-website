@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../../../layouts/Main/Main';
+import AddService from '../../pages/AddService/AddService';
 import Blog from '../../pages/Blog/Blog';
 import Edit from '../../pages/Edit/Edit';
 import Error from '../../pages/Error/Error';
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
             {
                 path: '/edit-review',
                 element: <Edit></Edit>
+            },
+            {
+                path: '/add-service',
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
             },
             {
                 path: '/service/:id',
