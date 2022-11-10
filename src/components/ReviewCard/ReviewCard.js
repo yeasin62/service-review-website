@@ -2,6 +2,7 @@ import React from 'react';
 import './ReviewCard.css'
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const ReviewCard = ({review, handleDelete,handleReviewUpdate}) => {
     const {_id,name,photo,comment,serviceName} = review;

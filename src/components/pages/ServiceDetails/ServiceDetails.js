@@ -74,7 +74,6 @@ const ServiceDetails = () => {
                             <p className="text-sm mb-3">
                                 {details}
                             </p>
-                            <button type="button" className="px-4 py-2 border rounded dark:border-gray-100 dark:text-gray-100">Details</button>
                         </div>
                     </div>
                 </div>

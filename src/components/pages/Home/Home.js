@@ -5,7 +5,7 @@ import ServiceCard from '../ServiceCard/ServiceCard';
 const Home = () => {
     const [services, setServices] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('http://localhost:5000/service')
         .then(res => res.json())
         .then(data => setServices(data));
     },[])
@@ -35,6 +35,9 @@ const Home = () => {
                 {
                     services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                 }
+            </div>
+            <div className='text-center mb-40'>
+            <Link to={'/services'} className="px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100">See More</Link>
             </div>
         </div>
 
